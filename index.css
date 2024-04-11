@@ -1,0 +1,246 @@
+/* Custom Properties */
+/* ----------------- */
+
+/* Colors */
+/* Account for dark mode. */
+:root {
+    color-scheme: light dark;
+    --dark: 000000;
+    --light: ffffff;
+    --ocean: #4f42b5;
+    --grass: #7CFC00;
+    --sunlight: #FDB813;
+    --flame: #e25822;
+  }
+
+/* Body Set Up */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.25rem;
+  color: light-dark(--light, --dark);
+  background-color: light-dark(--dark, --light);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Typeface */
+h1,h2,h3,h4,h5,h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1,h2,h3 {
+    font-weight: bold;
+    letter-spacing: .05em;
+    line-height: 2em;
+}
+
+h1 { font-size: 6vw;}
+h2 { font-size: 3vw;}
+h3 { font-size: 2vw;}
+h4 { font-size: 1.5vw;}
+h5 { font-size: 1.25vw;}
+h6 { font-size: 1vw;}
+/* Reset --DON'T TOUCH*/
+/* ----------------- */
+
+/* Box Sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset Margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+
+  
+  /* Simplify Images */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Simplify Form Elements */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /* Remove animations by setting */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+  }
+/* Utility Classes */
+/* ----------------- */
+.uppercase { text-transform: uppercase; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line*/
+  border: 0;
+}
+
+/* Components */
+/* ----------------- */
+
+.button {
+  position: relative;
+  display: grid;
+  z-index: 1;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  text-decoration: none;
+}
+.button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: hsl(var(--dark)/.15);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 350ms linear, transform 500ms easi-in-out;
+}
+button:hover::after,
+.button:focus:after {
+  transform:scale(1.5);
+}
+button:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled{
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+.primary-nav {
+  --gap: 8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.prmary-nav a {
+ text-decoration: none;
+}
+.prmary-nav a > span {
+  font-weight:700;
+  margin-right: .5em;
+}
+
+.underline-indicators > * {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  border-bottom: .2rem solid hsl( var(--dark) / 0 );
+}
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl( var(-dark) / .5 );
+}
+.underline-indicators > *:active,
+.underline-indicators> [aria-selected="true"] {
+  color: hsl( var(NAME) / 1 );
+  border-color: hsl( var(-dark) / 1 );
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl( var(--light) / 1 );
+}
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: .5rem;
+  background-color: hsl( var(NAME) / .25 )
+}
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: .5rem;
+  background-color: hsl( var(NAME) / .5 )
+}
+
+ /* Link States */
+ a:link {
+  color: var(--flame);
+}
+a:visited {
+  color: var(--grass);
+}
+a:hover {
+  color: var(--ocean);
+}
+a:active {
+  color: var(--sunlight);
+}
+
+/* Progress Bar*/
+progress {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  height: 1rem;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  background: var(--light);
+  color: var(--fg);
+  border: .2rem solid var(--dark);
+  border-radius: 0;
+}
+progress::-webkit-progress-bar {
+  background-color: var(--dark);
+}
+progress::-webkit-progress-value {
+  background-color: var(--light);
+}
+progress::-moz-progress-bar {
+  background-color: var(--light);
+}
