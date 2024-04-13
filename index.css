@@ -5,12 +5,10 @@
 /* Account for dark mode. */
 :root {
     color-scheme: light dark;
-    --dark: 000000;
-    --light: ffffff;
-    --ocean: #4f42b5;
-    --grass: #7CFC00;
-    --sunlight: #FDB813;
-    --flame: #e25822;
+    --dark: #585858;
+    --light: #C1C1C1;
+    --lwlight: #1D1D1D;
+    --hilight: #E2E1E1;
   }
 
 /* Body Set Up */
@@ -221,7 +219,7 @@ a:active {
   color: var(--sunlight);
 }
 
-/* Progress Bar*/
+/* Progress Bar
 progress {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -243,4 +241,4 @@ progress::-webkit-progress-value {
 }
 progress::-moz-progress-bar {
   background-color: var(--light);
-}
+}*/
