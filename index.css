@@ -13,7 +13,7 @@
 
 /* Body Set Up */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Neuton", serif;
   font-size: 1.25rem;
   color: light-dark(--light, --dark);
   background-color: light-dark(--dark, --light);
@@ -23,11 +23,12 @@ body {
 
 /* Typeface */
 h1,h2,h3,h4,h5,h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Almendra SC", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1,h2,h3 {
-    font-weight: bold;
     letter-spacing: .05em;
     line-height: 2em;
 }
@@ -35,9 +36,9 @@ h1,h2,h3 {
 h1 { font-size: 6vw;}
 h2 { font-size: 3vw;}
 h3 { font-size: 2vw;}
-h4 { font-size: 1.5vw;}
-h5 { font-size: 1.25vw;}
-h6 { font-size: 1vw;}
+h4 { font-size: 1em;}
+h5 { font-size: .75em;}
+h6 { font-size: .5em;}
 /* Reset --DON'T TOUCH*/
 /* ----------------- */
 
