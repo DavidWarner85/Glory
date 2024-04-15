@@ -5,8 +5,10 @@
 /* Account for dark mode. */
 :root {
     color-scheme: light dark;
-    --dark: #585858;
-    --light: #C1C1C1;
+    --dark: rgba(0, 0, 0, 0);
+    --light: rgba(255, 255, 255, 0.863);
+    --gldark:#585858;
+    --gllight: #C1C1C1;
     --lwlight: #1D1D1D;
     --hilight: #E2E1E1;
   }
@@ -15,6 +17,7 @@
 body {
   font-family: "Neuton", serif;
   font-size: 1.25rem;
+  background-image: url(images/background.png);
   color: light-dark(--light, --dark);
   background-color: light-dark(--dark, --light);
   line-height: 1.5;
@@ -122,51 +125,22 @@ p {
 /* Components */
 /* ----------------- */
 
-.button {
-  position: relative;
-  display: grid;
-  z-index: 1;
-  place-items: center;
-  padding: 0 2em;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  text-decoration: none;
-}
-.button::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  background: hsl(var(--dark)/.15);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 350ms linear, transform 500ms easi-in-out;
-}
-button:hover::after,
-.button:focus:after {
-  transform:scale(1.5);
-}
-button:disabled,
-input[type="button"]:disabled,
-input[type="reset"]:disabled,
-input[type="submit"]:disabled{
-  border-style: dashed;
-  cursor: not-allowed;
-}
-
-.primary-nav {
-  --gap: 8rem;
+.navbar .ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background-color: var(--lwlight);
+  overflow: hidden;
 }
-.prmary-nav a {
- text-decoration: none;
+.navbar a {
+  color: var(--hilight);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
 }
-.prmary-nav a > span {
-  font-weight:700;
-  margin-right: .5em;
+.navbar li {
+  float: left;
 }
 
 .underline-indicators > * {
@@ -206,40 +180,3 @@ input[type="submit"]:disabled{
   background-color: hsl( var(NAME) / .5 )
 }
 
- /* Link States */
- a:link {
-  color: var(--flame);
-}
-a:visited {
-  color: var(--grass);
-}
-a:hover {
-  color: var(--ocean);
-}
-a:active {
-  color: var(--sunlight);
-}
-
-/* Progress Bar
-progress {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  display: block;
-  height: 1rem;
-  overflow: hidden;
-  padding: 0;
-  width: 100%;
-  background: var(--light);
-  color: var(--fg);
-  border: .2rem solid var(--dark);
-  border-radius: 0;
-}
-progress::-webkit-progress-bar {
-  background-color: var(--dark);
-}
-progress::-webkit-progress-value {
-  background-color: var(--light);
-}
-progress::-moz-progress-bar {
-  background-color: var(--light);
-}*/
