@@ -16,13 +16,14 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <nav id="navbar">
+        <nav>
             <ul>
                 <li><a href="narrators_guide.php">Narrators</a></li>
                 <li><a href="">Heroes</a></li>
                 <li><a href="">Worldspace</a></li>
                 <li><a href="">Skills</a></li>
                 <li><a href="">Equipment</a></li>
+                <li><a href="">Account</a></li>
             </ul>
         </nav>
 

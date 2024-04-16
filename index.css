@@ -42,6 +42,73 @@ h3 { font-size: 2vw;}
 h4 { font-size: 1em;}
 h5 { font-size: .75em;}
 h6 { font-size: .5em;}
+
+
+/* Components */
+/* ----------------- */
+ul {
+  list-style-type: none;
+  width: max-content;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1D1D1D;
+  border-color: #E2E1E1;
+}
+li {
+  float: left;
+  border: 5px;
+}
+a {
+  display: block;
+  text-decoration: none;
+  padding: 8px;
+  text-align: center;
+  color: var(--hilight);
+  background-color: var(--lwlight);
+}
+
+.underline-indicators > * {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  border-bottom: .2rem solid hsl( var(--dark) / 0 );
+}
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl( var(-dark) / .5 );
+}
+.underline-indicators > *:active,
+.underline-indicators> [aria-selected="true"] {
+  color: hsl( var(NAME) / 1 );
+  border-color: hsl( var(-dark) / 1 );
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl( var(--light) / 1 );
+}
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: .5rem;
+  background-color: hsl( var(NAME) / .25 )
+}
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: .5rem;
+  background-color: hsl( var(NAME) / .5 )
+}
+
+
 /* Reset --DON'T TOUCH*/
 /* ----------------- */
 
@@ -121,62 +188,3 @@ p {
   white-space: nowrap; /* added line*/
   border: 0;
 }
-
-/* Components */
-/* ----------------- */
-
-.navbar .ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background-color: var(--lwlight);
-  overflow: hidden;
-}
-.navbar a {
-  color: var(--hilight);
-  text-decoration: none;
-  padding: 15px;
-  display: block;
-  text-align: center;
-}
-.navbar li {
-  float: left;
-}
-
-.underline-indicators > * {
-  padding: 0;
-  border: 0;
-  cursor: pointer;
-  border-bottom: .2rem solid hsl( var(--dark) / 0 );
-}
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
-  border-color: hsl( var(-dark) / .5 );
-}
-.underline-indicators > *:active,
-.underline-indicators> [aria-selected="true"] {
-  color: hsl( var(NAME) / 1 );
-  border-color: hsl( var(-dark) / 1 );
-}
-
-.dot-indicators > [aria-selected="true"] {
-  background-color: hsl( var(--light) / 1 );
-}
-.dot-indicators > * {
-  cursor: pointer;
-  border: 0;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  padding: .5rem;
-  background-color: hsl( var(NAME) / .25 )
-}
-.dot-indicators > *:hover,
-.dot-indicators > *:focus {
-  cursor: pointer;
-  border: 0;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  padding: .5rem;
-  background-color: hsl( var(NAME) / .5 )
-}
-
