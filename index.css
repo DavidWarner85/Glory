@@ -46,7 +46,7 @@ h6 { font-size: .5em;}
 
 /* Components */
 /* ----------------- */
-ul {
+.site-nav ul {
   list-style-type: none;
   width: max-content;
   height: 45px;
@@ -55,20 +55,27 @@ ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #1D1D1D;
-  border-color: #E2E1E1;
+  background-color: var(--lwlight);
+  border: 3px solid;
+  border-color: var(--hilight);
 }
-li {
+.site-nav li {
   float: left;
-  border: 5px;
 }
-a {
+.site-nav a {
   display: block;
+  width: 128px;
+  height: 35px;
+  text-align: center;
   text-decoration: none;
   padding: 8px;
+  font-family: "Almendra SC", serif;
+  font-size: .75em;
   text-align: center;
   color: var(--hilight);
   background-color: var(--lwlight);
+  border: 3px solid;
+  border-color: var(--hilight);
 }
 
 .underline-indicators > * {

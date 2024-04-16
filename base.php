@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <nav>
+        <nav class="site-nav">
             <ul>
                 <li><a href="narrators_guide.php">Narrators</a></li>
                 <li><a href="">Heroes</a></li>
