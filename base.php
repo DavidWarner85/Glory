@@ -18,13 +18,18 @@
     <body>
         <nav class="site-nav">
             <ul>
+                <li class="nav-logo"><img src="images/logo32.png" alt="Glory logo"></li>
                 <li><a href="narrators_guide.php">Narrators</a></li>
                 <li><a href="">Heroes</a></li>
                 <li><a href="">Worldspace</a></li>
                 <li><a href="">Skills</a></li>
                 <li><a href="">Equipment</a></li>
-                <li><a href="">Account</a></li>
+                <div class="account-btn"><li><a href="">Account</a></li></div>
             </ul>
         </nav>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-9">Content</div>
+            <div class="col-3">Ad Bar</div>
+        </div>
 
     </body>
