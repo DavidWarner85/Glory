@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home.php"><img src="images/logo32.png" alt="Glory Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -42,7 +42,6 @@
                 </ul>
             </div>
         </nav>
-        <img src="images/alert.jpg" alt="Alert">
 
         <script src="index.pack.js" async defer></script>
     </body>
