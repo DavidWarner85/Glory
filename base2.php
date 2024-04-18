@@ -42,6 +42,18 @@
                 </ul>
             </div>
         </nav>
+        <div id="main" class="row">
+            <div id="content" class="col-9">
+                <H1>Content</H1>
+            </div>
+            <div id="ad_bar" class="col-3">
+                <H1>Ad Bar</H1>
+            </div>
+        </div>
+        <footer class="row">
+            <span id="ftleft" class="col"><img src="images/logoMini.png" alt="Glory Logo">Glory&COPY;</span>
+            <span id="ftright" class="col">A DataWarner Creation<img src="images/dwMini.png" alt="DataWarner Logo"></span>
+        </footer>
 
         <script src="index.pack.js" async defer></script>
     </body>

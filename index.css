@@ -1,0 +1,19 @@
+#main{
+    width: 100vw;
+}
+#ad_bar {
+    display: block;
+    height: 100vw;
+    background-color: red;
+}
+#content {
+    display: block;
+    height: 100vw;
+    background-color: blue;
+}
+
+#ftleft {
+    padding-right: 10px;
+}#ftright {
+    display: block;
+}
