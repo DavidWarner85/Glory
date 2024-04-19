@@ -1,6 +1,71 @@
-#main{
-    width: 100vw;
+/* Custom Properties */
+/* ----------------- */
+
+/* Colors */
+/* Account for dark mode. */
+:root {
+    color-scheme: light dark;
+    --dark: #585858;
+    --light: #C1C1C1;
+    --lowlight: #1D1D1D;
+    --highlight: #E2E1E1;
 }
+body {
+    font-family: "Neuton", cursive;
+    font-size: 1.25rem;
+    
+    color: light-dark(--light, --dark);
+    background-color: light-dark(--dark, --light);
+    line-height: 1.5rem;
+  }
+/* Typeface */
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Almendra SC", serif;
+}
+
+h1,h2,h3 {
+    font-weight: bold;
+    letter-spacing: .05em;
+    line-height: 2em;
+}
+
+h1 { font-size: 7vw;}
+h2 { font-size: 3rem;}
+h3 { font-size: 2rem;}
+h4 { font-size: 1.25rem;}
+h5 { font-size: 1rem;}
+h6 { font-size: .75rem;}
+
+  /* Remove animations by setting */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+  }
+  /* Utility Classes */
+/* ----------------- */
+.uppercase { text-transform: uppercase; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line*/
+  border: 0;
+}
+
+
+  /* Components */
+/* ----------------- */
 #ad_bar {
     display: block;
     height: 100vw;
@@ -10,10 +75,4 @@
     display: block;
     height: 100vw;
     background-color: blue;
-}
-
-#ftleft {
-    padding-right: 10px;
-}#ftright {
-    display: block;
 }

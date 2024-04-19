@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible">
+        <html data-bs-theme="auto">
+        <html lang="en" data-bs-theme="auto">
         <title>Base Page</title>
         <meta name="description" content="a set of design components to be used throughout the website">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +18,7 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home.php"><img src="images/logo32.png" alt="Glory Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -40,9 +42,10 @@
                     <a class="nav-link" href="equipment_guide.php">Equipment</a>
                     </li>
                 </ul>
+                <button type="button" class="btn">Account</button>
             </div>
         </nav>
-        <div id="main" class="row">
+        <div class="row">
             <div id="content" class="col-9">
                 <H1>Content</H1>
             </div>
@@ -50,10 +53,11 @@
                 <H1>Ad Bar</H1>
             </div>
         </div>
-        <footer class="row">
-            <span id="ftleft" class="col"><img src="images/logoMini.png" alt="Glory Logo">Glory&COPY;</span>
-            <span id="ftright" class="col">A DataWarner Creation<img src="images/dwMini.png" alt="DataWarner Logo"></span>
+        <footer class="clearfix">
+            <span class="float-start"><img src="images/logoMini.png" alt="Glory Logo">   Glory&COPY;</span>
+            <span class="float-end">A DataWarner Creation   <img src="images/dwMini.png" alt="DataWarner Logo"></span>
         </footer>
 
+        <script src="./src/bootstrap-auto-dark-mode.js"></script>
         <script src="index.pack.js" async defer></script>
     </body>
