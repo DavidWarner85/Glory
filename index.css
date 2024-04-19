@@ -13,7 +13,6 @@
 body {
     font-family: "Neuton", cursive;
     font-size: 1.25rem;
-    
     color: light-dark(--light, --dark);
     background-color: light-dark(--dark, --light);
     line-height: 1.5rem;
@@ -66,13 +65,37 @@ h6 { font-size: .75rem;}
 
   /* Components */
 /* ----------------- */
+#site_nav {
+  width: 100vw;
+  height: 45px;
+  position: fixed;
+  background-color: var(--lowlight);
+  border: 3px solid;
+  border-color: var(--highlight);
+}
+.navbar-nav {
+  width: 80vw;
+}
+.navbar-nav > li{
+  width: 128px;
+  height: 40px;
+  font-family: "Almendra SC", serif;
+  font-size: 1em;
+  text-align: center;
+  margin-right: 5%;
+  border: 3px solid;
+  border-color: var(--highlight);
+}
+#account_btn {
+  float: inline-end;
+}
+
 #ad_bar {
     display: block;
     height: 100vw;
-    background-color: red;
+    border: 5px solid black;
 }
 #content {
     display: block;
     height: 100vw;
-    background-color: blue;
 }

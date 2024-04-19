@@ -18,10 +18,11 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-sm">
+        <nav id="site_nav" class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home.php"><img src="images/logo32.png" alt="Glory Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mynavbar">
@@ -42,8 +43,8 @@
                     <a class="nav-link" href="equipment_guide.php">Equipment</a>
                     </li>
                 </ul>
-                <button type="button" class="btn">Account</button>
             </div>
+            <span id="account_btn"><button><a href="">Account</a></button></span>
         </nav>
         <div class="row">
             <div id="content" class="col-9">
