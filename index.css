@@ -16,7 +16,7 @@ body {
     color: light-dark(--light, --dark);
     background-color: light-dark(--dark, --light);
     line-height: 1.5rem;
-  }
+}
 /* Typeface */
 h1,h2,h3,h4,h5,h6 {
     font-family: "Almendra SC", serif;
@@ -63,11 +63,10 @@ h6 { font-size: .75rem;}
 }
 
 
-  /* Components */
+/* Components */
 /* ----------------- */
 #site_nav {
   width: 100vw;
-  height: 45px;
   position: fixed;
   background-color: var(--lowlight);
   border: 3px solid;
@@ -88,14 +87,46 @@ h6 { font-size: .75rem;}
 }
 #account_btn {
   float: inline-end;
+  width: 128px;
+  height: 40px;
+  background-color: var(--lowlight);
+  border: 3px solid;
+  border-color: var(--highlight);
+}
+#account_btn >a {
+  text-decoration: none;
+  font-family: "Almendra SC", serif;
+  font-size: 1em;
+  text-align: center;
+  color: var(--highlight);
 }
 
+#main {
+  background-image: url(images/background.png);
+}
 #ad_bar {
+    margin-top: 50px;
+    text-align: center;
     display: block;
     height: 100vw;
     border: 5px solid black;
 }
 #content {
+    margin-top: 50px;
+    text-align: center;
     display: block;
     height: 100vw;
+}
+.clearfix {
+  width: 100vw;
+  height: 25px;
+  font-family: "Almendra SC", serif;
+  font-size: .75em;
+  color: var(--highlight);
+}
+#footer {
+  width: auto;
+  background-color: var(--lowlight);
+  border-top: 3px solid;
+  border-color: var(--highlight);
 }

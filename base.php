@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible">
+        <html data-bs-theme="auto">
+        <html lang="en" data-bs-theme="auto">
         <title>Base Page</title>
         <meta name="description" content="a set of design components to be used throughout the website">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,25 +18,48 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <button class="nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
-        <nav class="site-nav">
-            <ul id="primary-navigation">
-                <li class="nav-logo"><img src="images/logo32.png" alt="Glory logo"></li>
-                <li><a href="narrators_guide.php">Narrators</a></li>
-                <li><a href="">Heroes</a></li>
-                <li><a href="">Worldspace</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Equipment</a></li>
-                <div class="account-btn"><li><a href="">Account</a></li></div>
-            </ul>
+        <nav id="site_nav" class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.php"><img src="images/logo32.png" alt="Glory Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                        <a class="nav-link" href="narrators_guide.php">Narrators</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="heroes_guide.php">Heroes</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="worldspace_guide.php">Worldspace</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="skills_guide.php">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="equipment_guide.php">Equipment</a>
+                        </li>
+                    </ul>
+                </div>
+                <span><button id="account_btn"><a href="">Account</a></button></span>   
+            </div>
         </nav>
-        <div id="main">
-            <div id="content">Content</div>
-            <div id="ad-bar">Ad Bar</div>
+        <div id="main" class="row">
+            <div id="content" class="col-9">
+                <H1>Content</H1>
+            </div>
+            <div id="ad_bar" class="col-3">
+                <H1>Ad Bar</H1>
+            </div>
         </div>
-        <footer class="row">
-            <span class="col">Glory&copy</span>
-            <span class="col">A DataWarner Creation</span>
+        <footer id="footer" class="clearfix">
+            <span class="float-start"><img style="margin-left: 10px;" src="images/logoMini.png" alt="Glory Logo"><span style="margin-left: 10px;">Glory&COPY;</span></span>
+            <span class="float-end"><span style="margin-right: 10px;">A DataWarner Creation</span><img style="margin-right: 10px;"  src="images/dwMini.png" alt="DataWarner Logo"></span>
         </footer>
-    
+
+        <script src="./src/bootstrap-auto-dark-mode.js"></script>
+        <script src="index.pack.js" async defer></script>
     </body>
