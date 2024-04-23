@@ -60,6 +60,7 @@
             <span class="float-end"><span style="margin-right: 10px;">A DataWarner Creation</span><img style="margin-right: 10px;"  src="images/dwMini.png" alt="DataWarner Logo"></span>
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="./src/bootstrap-auto-dark-mode.js"></script>
         <script src="index.pack.js" async defer></script>
     </body>
